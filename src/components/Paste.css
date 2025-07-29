@@ -1,0 +1,123 @@
+/* Search input */
+.input-container {
+background: rgba(255, 255, 255, 0.1); /* low-opacity white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+   color: white;
+    
+   color: #ffffff;
+ 
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.input-container:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Paste list container */
+.cont-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+/* Individual paste card */
+.cont-2 {
+   background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white; /* Adjust text color for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cont-2:hover{
+   transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Title and content */
+.cont-2 > div:first-child {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: blanchedalmond;
+}
+.cont-2 > div:nth-child(2) {
+  color: wheat;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Edit/view/copy/share buttons */
+.edit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.edit-container button {
+ backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #ffffff;
+   /* color: #ffffff; */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  margin: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.edit-container button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+.edit-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Date style */
+.cont-2 > div:last-child {
+  font-size: 0.85rem;
+   color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); */
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .input-container {
+    min-width: 100%;
+    width: 100%;
+  }
+  .cont-2 {
+    padding: 0.75rem;
+  }
+  .edit-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

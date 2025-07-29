@@ -1,0 +1,65 @@
+/* Main container spacing */
+.div-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.div-2 {
+  margin-top: 2rem;
+}
+
+/* Title input */
+.title-container {
+   background: rgba(255, 255, 255, 0.05); /* frosted effect */
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Textarea for content */
+.textarea-container {
+    background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem;
+  width: 100%;
+  min-height: 200px;
+  color: #ffffff;
+  font-size: 1rem;
+  resize: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Disabled input and textarea style */
+.title-container:disabled,
+.textarea-container:disabled {
+      background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-color: #e0e0e0;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .div-1, .div-2 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .title-container, .textarea-container {
+    min-width: 100%;
+    width: 100%;
+  }
+}
